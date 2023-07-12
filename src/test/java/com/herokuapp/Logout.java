@@ -1,20 +1,17 @@
-package com.herokapp;
+package com.herokuapp;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class NegativeLogin {
-
+public class Logout {
     @Test
-    public void NegativeTest (){
-
+    public void logoutTest () {
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        String url = "https://the-internet.herokuapp.com/login";
+        String url = "https://the-internet.herokuapp.com/logout";
         driver.get(url);
         driver.manage().window().maximize();
 
@@ -24,7 +21,7 @@ public class NegativeLogin {
 
         //enter password
         WebElement passwordInput = driver.findElement(By.name("password"));
-        passwordInput.sendKeys("SuperSecretPassword");
+        passwordInput.sendKeys("SuperSecretPassword!");
 
         //click login
         //WebElement loginButton = driver.findElement(By.xpath("//*[@id=\"login\"]/button/i"));
@@ -32,9 +29,15 @@ public class NegativeLogin {
         //WebElement loginButton = driver.findElement(By.tagName("button"));
         loginButton.click();
 
-        //verificare
-        WebElement errorAlert = driver.findElement(By.id("flash"));
-        Assert.assertTrue(errorAlert.getText().contains("Your password is invalid!"));
+        //click logout
+        WebElement logoutButton = driver.findElement(By.xpath("//*[@id=\"content\"]/div/a/i"));
+        logoutButton.click();
+
+
+        driver.close();
+
+
+
 
     }
 }
