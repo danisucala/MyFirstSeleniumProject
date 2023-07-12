@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class Checkboxes {
 
-    @Test
+    @Test(groups = {"regression","smoke"})
     public void checkboxTest(){
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -29,7 +29,7 @@ public class Checkboxes {
         driver.close();
     }
 
-    @Test
+    @Test(groups = {"regression"})
     public void uncheckCheckboxesTest(){
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
