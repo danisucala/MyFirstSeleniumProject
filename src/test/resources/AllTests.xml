@@ -13,6 +13,10 @@
             <class name="com.herokuapp.Logout"/>
             <class name="com.herokuapp.NegativeLogin"/>
             <class name="com.herokuapp.Dropdown"/>
+            <class name="com.herokuapp.Upload"/>
+            <class name="com.herokuapp.Download"/>
+            <class name="com.herokuapp.Checkboxes"/>
+            <class name="com.herokuapp.Input"/>
         </classes>
     </test>
 </suite>

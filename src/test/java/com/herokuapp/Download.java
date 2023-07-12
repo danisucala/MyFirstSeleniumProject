@@ -17,6 +17,7 @@ public class Download {
 
         WebElement fileExemplo = driver.findElement(By.xpath("//*[@id=\"content\"]/div/a[1]"));
         fileExemplo.click();
+        driver.close();
 
 
 

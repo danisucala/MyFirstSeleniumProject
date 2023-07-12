@@ -17,7 +17,7 @@ public class Input {
         driver.get(url);
         driver.manage().window().maximize();
 
-        WebElement input = driver.findElement(By.xpath("//*[@id=\\\"content\\\"]/div/div/div/input"));
+        WebElement input = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/div/input"));
         input.click();
         input.sendKeys("55");
         input.clear();
